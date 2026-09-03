@@ -1,0 +1,25 @@
+import axios from "axios";
+
+const api = axios.create({
+  baseURL: import.meta.env.VITE_API_URL,
+  timeout: 15000,
+});
+
+api.interceptors.request.use(
+  (config) => {
+    const storage = localStorage.getItem("token")
+      ? localStorage
+      : sessionStorage;
+
+    const token = storage.getItem("token");
+
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
+
+export default api;

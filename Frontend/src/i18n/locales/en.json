@@ -1,0 +1,263 @@
+{
+  "navbar": {
+    "home": "Home",
+    "calculator": "Calculator",
+    "dashboard": "Dashboard",
+    "history": "History",
+    "about":"About",
+    "report": "Report",
+    "login": "Login",
+    "register": "Register",
+    "profile": "Profile",
+    "settings": "Settings",
+    "logout": "Logout"
+  },
+
+  "footer": {
+    "description":"Track your carbon footprint, understand your environmental impact, and build a greener future.",
+    "links":"Quick Links",
+    "why":"Why EcoTrack V1?",
+    "track":"Track your footprint",
+    "impact":"Understand your impact",
+    "insights":"Get personalized insights",
+    "habits":"Build sustainable habits"
+  },
+
+  "home": {
+    "title":"Measure Your Carbon Footprint",
+    "subtitle":"EcoTrack helps you calculate, monitor and reduce your environmental impact through intelligent analytics and personalized eco recommendations.",
+    "button":"Start Calculating",
+    "carbon":"Carbon Calculator",
+    "carbondescription":"Instantly calculate your carbon emissions.",
+    "dashboard":"Analytics Dashboard",
+    "progress":"Track your environmental progress.",
+    "achievements":"Achievements",
+    "badges":"Unlock eco badges while improving.",
+    "history":"History",
+    "calculation":"Review every calculation anytime.",
+    "awareness":"Eco Awareness",
+    "track":"Carbon Tracking",
+    "future":"Greener Future",
+    "how":"How It Works",
+    "data":"Enter Data",
+    "fill":"Fill in transportation, electricity, and waste details.",
+    "calculate":"Calculate",
+    "estimate":"EcoTrack estimates your carbon footprint instantly",
+    "improve":"Improve",
+    "insights":"Get insights and reduce your environmental impact.",
+    "quote":"We do not inherit the Earth from our ancestors; we borrow it from our children.",
+    "protect":"Let's protect our planet together.",
+    "ready":"Ready to reduce your footprint?",
+    "now":"Calculate Now"
+  },
+
+  "dashboard": {
+    "title": "Dashboard",
+    "noCalculations": "No calculations available yet. Visit the Calculator page and save some carbon footprints.",
+    "totalCalculations": "Total Calculations",
+    "averageCO2": "Average CO₂",
+    "highest": "Highest",
+    "lowest": "Lowest",
+    "carbonTrend": "Carbon Footprint Trend",
+    "ecoProgress": "Eco Progress",
+    "calculationsCompleted": "Calculations Completed",
+    "sustainabilityScore": "Sustainability Score",
+    "dailyEcoTip": "Daily Eco Tip",
+    "ecoTipFooter": "Small actions create a greener future 🌍",
+    "achievements": "Achievements",
+    "unlocked": "Unlocked",
+    "calculations": "Calculations",
+    "nextGoal": "Next Goal",
+    "unlock": "Unlock",
+    "need": "You need",
+    "moreCalculations": "more calculations.",
+    "congratulations": "Congratulations! You have unlocked every badge."
+  },
+
+  "calculator": {
+    "title": "Carbon Footprint Calculator",
+    "calculate": "Calculate",
+    "result": "Your Result",
+    "enterValue": "Enter value",
+    "transportation":"Transportation",
+    "home":"Home Energy",
+    "food":"Food",
+    "waste":"Waste",
+    "reset":"Reset Calculator",
+    "estimate":"Live Estimate",
+    "level":"Emission Level",
+    "recommendation":"Recommendation",
+    "excellent":"Excellent! Your emissions are very low. Keep maintaining eco-friendly habits.",
+    "try":"Try reducing electricity usage and consider public transportation.",
+    "emission":"Your emissions are high. Focus on transportation, electricity and waste reduction",
+    "environment":"Environmental Impact",
+    "trees":"Trees Equivalent",
+    "year":"trees/year",
+    "car":"Driving Equivalent",
+    "km":"km driven",
+    "electricity":"Electricity Equivalent",
+    "days":"days of usage",
+    "did":"Did You Know?",
+    "calculation":"Calculation Result",
+    "mature":"One mature tree absorbs about 22 kg of CO₂ every year.",
+    "bulbs":"LED bulbs consume much less electricity than incandescent bulbs.",
+    "cycling":"Cycling instead of driving reduces carbon emissions and improves health.",
+    "recycling":"Recycling aluminum saves significant energy compared to producing new aluminum",
+    "showers":"Shorter showers can save both water and the energy used to heat it."
+  },
+
+  "history": {
+    "title": "Calculation History",
+    "delete": "Delete",
+    "noHistory": "No calculation history available.",
+    "placeholder":"🔍 Search calculations...",
+    "total":"Total Records",
+    "average":"Average CO₂",
+    "highest":"Highest",
+    "start":"Start using the calculator to save your carbon footprint records.",
+    "date":"Date",
+    "carbon":"Carbon",
+    "action":"Action",
+    "go":"Keep Going!",
+    "description":"Every calculation helps you understand your environmental impact. Tracking your footprint regularly is the first step toward living more sustainably.",
+    "progress":"Progress",
+    "record":"Records"
+  },
+
+  "report": {
+    "title": "Carbon Report",
+    "summary": "Summary",
+    "insights": "Eco Insights",
+    "recommendations": "Recommendations",
+    "download":"Download your report",
+    "report":"Download Report"
+  },
+
+  "profile": {
+    "title": "Profile",
+    "fullName": "Full Name",
+    "email": "Email",
+    "country": "Country",
+    "joined":"Joined",
+    "update": "Update Profile",
+    "save":"Save",
+    "cancel":"Cancel",
+    "edit":"Edit Profile",
+    "total":"Total Records",
+    "average":"Average CO₂",
+    "highest":"Highest CO₂",
+    "lowest":"Lowest CO₂",
+    "about":"About",
+    "information":"Your EcoTrack profile information."
+  },
+
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Customize your EcoTrack experience.",
+    "appearance": "Appearance",
+    "appearanceDescription": "Choose your preferred theme.",
+    "language": "Language",
+    "languageDescription": "Select your preferred language.",
+    "notifications": "Notifications",
+    "notificationsDescription": "Receive sustainability reminders and eco tips.",
+    "light": "Light",
+    "dark": "Dark",
+    "save": "Save Settings",
+    "saving": "Saving..."
+  },
+
+  "login": {
+    "title": "Sign in to EcoTrack",
+    "subtitle": "Track your carbon footprint and continue your green journey.",
+    "email": "Email",
+    "emailPlaceholder": "Enter your email",
+    "password": "Password",
+    "passwordPlaceholder": "Enter password",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot Password?",
+    "signIn": "Sign In",
+    "signingIn": "Signing in...",
+    "noAccount": "Don't have an account?",
+    "createAccount": "Create one"
+  },
+
+  "register": {
+    "title": "Create your EcoTrack account",
+    "subtitle": "Start your journey toward a greener future.",
+    "fullName": "Full Name",
+    "email": "Email",
+    "password": "Password",
+    "createAccount": "Create Account"
+  },
+
+  "about": {
+    "title": "About EcoTrack V1",
+    "subtitle":"Track your carbon footprint, build sustainable habits, and create a greener future.",
+    "mission":"Our Mission",
+    "description":"EcoTrack helps people understand their environmental impact through carbon footprint calculations, insightful analytics, and easy-to-read reports. Our goal is to encourage sustainable living by turning data into meaningful action.",
+    "features":"Features",
+    "carbon":"Carbon Calculator",
+    "carbondescription":"Estimate your carbon emissions quickly.",
+    "dashboard":"Dashboard",
+    "dashboarddescription":"Visualize your carbon footprint trends.",
+    "profile":"Personal Profile",
+    "profiledescription":"Track your progress and eco rank.",
+    "built":"Built With",
+    "future":"Future Goals",
+    "ai":"AI Eco Assistant",
+    "system":"Achievement System",
+    "report":"PDF Carbon Reports",
+    "news":"Environmental News",
+    "challenge":"Community Challenges",
+    "developer":"Developer",
+    "developerdescription":"EcoTrack is a full-stack web application developed as a portfolio project to demonstrate modern web development, data visualization, and environmental awareness using React, Express, Node.js, MySQL, and Tailwind CSS."
+  },
+
+  "help": {
+    "title": "Help & Support",
+    "subtitle":"Need assistance? Find answers below.",
+    "faq":"Frequently Asked Questions",
+    "how":"How do I calculate my carbon footprint?",
+    "howanswer":"Visit the Calculator page, enter your transport details, and save the calculation.",
+    "edit":"Can I edit my profile?",
+    "open":"Yes. Open your Profile page and click 'Edit Profile'.",
+    "delete":"Can I delete calculations?",
+    "history":"Yes. Go to History and click the Delete button on any saved record.",
+    "secure":"Is my information secure?",
+    "information":"Yes. EcoTrack stroes only the information required for your account and calculations.",
+    "bug":"Report a Bug",
+    "found":"Found something that isn't working? Please contact the developer with a description and screenshots if possible.",
+    "suggest":"Suggest a Feature",
+    "idea":"Have an idea to improve EcoTrack? We'd love to hear your suggestions for future updates.",
+    "contact":"Contact",
+    "support":"Support contact will be available in a future update.",
+    "privacy":"Privacy",
+    "description":"EcoTrack respects your privacy. Your profile information and carbon calculations are only used to provide personalized insights within the app."
+  },
+
+  "achievements": {
+    "game":"EcoTrack Gamification",
+    "title":"Your Achievements",
+    "subtitle":"Every sustainable action brings you closer to becoming a stronger contributor to a greener planet.",
+    "xp": "XP",
+    "unlocked": "Unlocked",
+    "locked": "Locked",
+    "unlockedOn": "Unlocked on",
+    "1": {
+      "name": "First Step",
+      "description": "Complete your first carbon footprint calculation."
+    },
+    "2": {
+      "name": "Eco Beginner",
+      "description": "Complete 5 carbon footprint calculations."
+    },
+    "3": {
+      "name": "Green Warrior",
+      "description": "Complete 10 carbon footprint calculations."
+    },
+    "4":{
+      "name": "Eco Champion",
+      "description":"Complete 25 carbon footprint calculations."
+    }
+  }
+}

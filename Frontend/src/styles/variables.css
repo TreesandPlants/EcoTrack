@@ -1,0 +1,50 @@
+:root{
+
+/* Brand */
+
+--primary:#16a34a;
+--primary-dark:#15803d;
+--primary-light:#dcfce7;
+
+/* Accent */
+
+--secondary:#2563eb;
+--warning:#f59e0b;
+--danger:#ef4444;
+
+/* Neutral */
+
+--white:#ffffff;
+--bg:#f8fff8;
+--surface:#ffffff;
+
+--gray50:#f9fafb;
+--gray100:#f3f4f6;
+--gray200:#e5e7eb;
+--gray300:#d1d5db;
+--gray400:#9ca3af;
+--gray500:#6b7280;
+--gray600:#4b5563;
+--gray700:#374151;
+--gray800:#1f2937;
+
+/* Radius */
+
+--radius-sm:10px;
+--radius-md:16px;
+--radius-lg:22px;
+--radius-xl:30px;
+
+/* Shadows */
+
+--shadow-sm:0 2px 8px rgba(0,0,0,.08);
+
+--shadow-md:0 8px 25px rgba(0,0,0,.12);
+
+--shadow-lg:0 15px 40px rgba(0,0,0,.18);
+
+/* Animation */
+
+--transition:.3s ease;
+
+}

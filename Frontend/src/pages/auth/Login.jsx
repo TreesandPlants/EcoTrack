@@ -64,7 +64,17 @@ function Login() {
       form
     );
 
-    const { token, user } = response.data;
+    console.log("LOGIN STATUS:", response.status);
+
+    console.log("Login API response:", response.data);
+
+   const { token, user } = response.data;
+
+if (!token || !user || !user.id) {
+  console.error("Unexpected login response:", response.data);
+  toast.error("Unexpected login response from server.");
+  return;
+}
 
     // =====================================
     // STORE USER INFORMATION

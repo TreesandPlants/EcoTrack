@@ -39,11 +39,18 @@ router.get(
 
 authMiddleware,
 
+requireSameUser,
+
 getEcoRank
 
 );
 
-router.put("/:id", updateProfile);
+router.put(
+  "/:id",
+  authMiddleware,
+  requireSameUser,
+  updateProfile
+);
 
 router.post(
   "/upload/:id",

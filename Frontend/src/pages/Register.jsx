@@ -1,5 +1,6 @@
 import { useState } from "react";
 import api from "../services/api";
+import { Link} from "react-router-dom";
 import GlassCard from "../components/GlassCard";
 import AnimatedButton from "../components/AnimatedButton";
 import AuthInput from "../components/auth/AuthInput";
@@ -74,9 +75,8 @@ if (
     >
       <form
         onSubmit={handleSubmit}
-        className="bg-white p-8 rounded-xl shadow-lg w-96"
+        className="space-y-5"
       >
-        <GlassCard>
         <h1 className="text-3xl font-bold text-center mb-6">
           Register
         </h1>
@@ -122,9 +122,27 @@ if (
           Register
         </AnimatedButton>
 
-        </GlassCard>
-
       </form>
+
+      <p className="text-center mt-8">
+
+Already had an account?
+
+{" "}
+
+<Link
+
+to="/login"
+
+className="text-green-700 font-semibold"
+
+>
+
+Sign In
+
+</Link>
+
+</p>
 
     </AuthLayout>
   );

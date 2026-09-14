@@ -153,8 +153,25 @@ exports.saveCalculation = async (req, res) => {
               // STEP 4 — CHECK ACHIEVEMENTS
               // ======================================================
 
-                const newlyUnlocked =
-                  await checkAchievements(user_id);
+               let newlyUnlocked = [];
+
+try {
+
+  newlyUnlocked =
+    await checkAchievements(user_id);
+
+} catch (achievementError) {
+
+  console.error(
+    "❌ Achievement processing failed:",
+    achievementError
+  );
+
+  // Calculation and XP were already successfully saved.
+  // Don't fail the entire calculation request.
+  newlyUnlocked = [];
+
+}
 
               // ======================================================
               // FINAL RESPONSE

@@ -84,14 +84,15 @@ if (loading) {
     <BrowserRouter>
     <PreferenceInitializer/>
     <ScrollToTop/>
-    <AnimatedBackground />
-    <div className="min-h-screen dark:bg-gray-950 text-gray-900 dark:text-gray-200 transition-colors duration-300">
-      <Routes>
-        <Route path="/" element={<PageTransition><Layout><Home /></Layout></PageTransition>} />
-
+    <AnimatedBackground/>
+    <Routes>
         <Route path="/login" element={<PageTransition><Login /></PageTransition>} />
 
         <Route path="/register" element={<PageTransition><Register /></PageTransition>} />
+
+        <Route path="*" element={<div className="min-h-screen dark:bg-gray-950 text-gray-900 dark:text-gray-200 transition-colors duration-300">
+        <Routes>
+        <Route path="/" element={<PageTransition><Layout><Home /></Layout></PageTransition>} />
 
         <Route path="/calculator" element={<PageTransition><Layout><Calculator /></Layout></PageTransition>}/>
         
@@ -119,14 +120,9 @@ element={<ProtectedRoute><Report/></ProtectedRoute>}
     </Layout>
   }
 />
-        <Route
-  path="*"
-  element={
-      <NotFound />
-  }
+<Route path="*" element={<NotFound />}/></Routes></div>}
 />
       </Routes>
-      </div>
     </BrowserRouter>
   );
 }

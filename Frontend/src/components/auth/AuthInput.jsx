@@ -27,8 +27,6 @@ px-5
 
 outline-none
 
-dark:text-gray-800
-
 focus:ring-2
 focus:ring-green-500
 transition

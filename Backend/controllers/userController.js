@@ -167,9 +167,6 @@ const updateProfile = (req, res) => {
 
 const uploadProfileImage = (req, res) => {
 
-  console.log(req.file);
-  console.log(req.body);
-
   const id = req.params.id;
 
   if (!req.file) {
@@ -187,7 +184,7 @@ const uploadProfileImage = (req, res) => {
     [imagePath, id],
     (err) => {
       if (err)
-        return res.status(500).json(err);
+        return res.status(500).json({message: "Failed to update profile image"});
 
       res.json({
         message: "Profile image updated",
@@ -209,9 +206,12 @@ db.query(
 
 (err,result)=>{
 
-if(err)
-return res.status(500).json(err);
-
+if(err){
+  console.error("EcoRank Error:", err)
+return res.status(500).json({
+  message: "Failed to fetch EcoRank"
+});
+}
 if(result.length===0)
 return res.status(404).json({
 

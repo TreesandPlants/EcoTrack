@@ -1,0 +1,15 @@
+# Local database exports
+Database/*_current.sql
+
+# Environment and secret files
+.env
+.env.*
+!.env.example
+
+# Local dependencies and build output
+node_modules/
+dist/
+
+# OS/editor files
+.DS_Store
+.vscode/

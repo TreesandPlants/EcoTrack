@@ -1,48 +1,74 @@
 const multer = require("multer");
 const path = require("path");
+const fs = require("fs");
+
+// =====================================================
+// UPLOAD DIRECTORY
+// =====================================================
+
+const uploadDir = path.join(__dirname, "..", "uploads");
+
+if (!fs.existsSync(uploadDir)) {
+    fs.mkdirSync(uploadDir, {
+        recursive: true
+    });
+}
+
+// =====================================================
+// STORAGE
+// =====================================================
 
 const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, uploadDir);
+    },
 
-  destination(req, file, cb) {
-    cb(null, "uploads/");
-  },
+    filename: (req, file, cb) => {
+        const extension = path.extname(file.originalname);
 
-  filename(req, file, cb) {
+        const uniqueName =
+            `${Date.now()}-${Math.round(Math.random() * 1E9)}${extension}`;
 
-    const uniqueName =
-      Date.now() +
-      path.extname(file.originalname);
-
-    cb(null, uniqueName);
-
-  },
-
+        cb(null, uniqueName);
+    }
 });
+
+// =====================================================
+// FILE FILTER
+// =====================================================
 
 const fileFilter = (req, file, cb) => {
 
-  const allowed = [
-    "image/jpeg",
-    "image/png",
-    "image/jpg",
-  ];
+    const allowedTypes = [
+        "image/jpeg",
+        "image/png",
+        "image/webp"
+    ];
 
-  if (allowed.includes(file.mimetype)) {
-
-    cb(null, true);
-
-  } else {
-
-    cb(
-      new Error("Only JPG and PNG images are allowed."),
-      false
-    );
-
-  }
-
+    if (allowedTypes.includes(file.mimetype)) {
+        cb(null, true);
+    } else {
+        cb(
+            new Error(
+                "Only JPG, PNG and WebP images are allowed"
+            ),
+            false
+        );
+    }
 };
 
-module.exports = multer({
-  storage,
-  fileFilter,
+// =====================================================
+// MULTER
+// =====================================================
+
+const upload = multer({
+    storage,
+
+    limits: {
+        fileSize: 2 * 1024 * 1024 // 2 MB
+    },
+
+    fileFilter
 });
+
+module.exports = upload;

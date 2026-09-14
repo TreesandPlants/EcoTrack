@@ -27,7 +27,7 @@ db.getConnection((err, connection) => {
     if (err) {
         console.error("Database connection failed:", err.message);
     } else {
-        console.log("MySQL connected successfully");
+        console.log("✅ MySQL connected successfully");
         connection.release();
     }
 });

@@ -4,11 +4,34 @@ const jwt = require("jsonwebtoken");
 
 exports.register = async (req, res) => {
 try {
-const { full_name, email, password } = req.body;
+const rawName = req.body.full_name;
+const rawEmail = req.body.email;
+const password = req.body.password;
+
+const full_name = String(rawName || "").trim();
+const email = String(rawEmail || "").trim().toLowerCase();
 
 if (!full_name || !email || !password) {
   return res.status(400).json({
     message: "All fields are required",
+  });
+}
+
+if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  return res.status(400).json({
+    message: "Please provide a valid email address"
+  });
+}
+
+if (full_name.length < 2 || full_name.length > 100) {
+  return res.status(400).json({
+    message: "Name must contain between 2 and 100 characters"
+  });
+}
+
+if (password.length < 8) {
+  return res.status(400).json({
+    message: "Password must contain at least 8 characters"
   });
 }
 
@@ -52,7 +75,6 @@ db.query(
 
             return res.status(500).json({
               message: "Failed to create account",
-              error: insertError.message,
             });
           }
 
@@ -76,7 +98,6 @@ db.query(
 console.error("Registration error:", error);
 return res.status(500).json({
   message: "Registration failed",
-  error: error.message,
 });
 
 }
@@ -103,7 +124,7 @@ console.error("Login database error:", err);
 
   if (result.length === 0) {
     return res.status(404).json({
-      message: "User not found",
+      message: "Invalid email or password",
     });
   }
 
@@ -113,7 +134,7 @@ console.error("Login database error:", err);
     user.password === "GOOGLE_LOGIN"
   ) {
     return res.status(400).json({
-      message: "Please sign in using Google",
+      message: "Invalid email or password",
     });
   }
 
@@ -125,7 +146,7 @@ console.error("Login database error:", err);
 
     if (!isMatch) {
       return res.status(401).json({
-        message: "Invalid password",
+        message: "Invalid email or password",
       });
     }
 

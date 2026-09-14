@@ -52,7 +52,7 @@ localStorage.getItem("token")
 : sessionStorage;
 
 const response =
-await api.get("/calculations/user/${userId}");
+await api.get(`/calculations/user/${userId}`);
 
       setHistory(response.data);
 
